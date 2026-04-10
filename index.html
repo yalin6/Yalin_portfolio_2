@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İrem Yalın — Materials Engineer</title>
+  <meta name="description" content="İrem Yalın — Metallurgical & Materials Engineer. Aerospace materials, brand strategy, innovation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Background Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <a href="#home" class="nav__logo-link">İ.Y</a>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about" class="nav__link" data-text="About">About</a></li>
+      <li><a href="#education" class="nav__link" data-text="Education">Education</a></li>
+      <li><a href="#experience" class="nav__link" data-text="Experience">Experience</a></li>
+      <li><a href="#skills" class="nav__link" data-text="Skills">Skills</a></li>
+      <li><a href="#projects" class="nav__link" data-text="Projects">Projects</a></li>
+      <li><a href="#contact" class="nav__link" data-text="Contact">Contact</a></li>
+    </ul>
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#education" class="mobile-menu__link">Education</a></li>
+      <li><a href="#experience" class="mobile-menu__link">Experience</a></li>
+      <li><a href="#skills" class="mobile-menu__link">Skills</a></li>
+      <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+      <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="home" class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal-text">Metallurgical &amp; Materials Engineer</p>
+      <h1 class="hero__name">
+        <span class="hero__name-line reveal-text">İrem</span>
+        <span class="hero__name-line hero__name-line--italic reveal-text">Yalın</span>
+      </h1>
+      <p class="hero__tagline reveal-text">
+        Engineering the future through advanced materials,<br>aerospace innovation &amp; strategic thinking.
+      </p>
+      <div class="hero__cta reveal-text">
+        <a href="#about" class="btn btn--primary magnetic">
+          <span>Discover</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="img/file/cv(2).pdf" target="_blank" class="btn btn--ghost magnetic">
+          <span>Download CV</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13h10M8 2v8M4 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <div class="hero__scroll-line"></div>
+      <span>scroll</span>
+    </div>
+
+    <!-- Floating elements -->
+    <div class="hero__float hero__float--1">Fe<sub>3</sub>O<sub>4</sub></div>
+    <div class="hero__float hero__float--2">Al 7075</div>
+    <div class="hero__float hero__float--3">Ti-6Al-4V</div>
+    <div class="hero__float hero__float--4">σ<sub>y</sub></div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">01 — About</span>
+        <h2 class="section__title">Who am I?</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p class="about__lead">
+            I am a Metallurgical and Materials Engineer with a passion for <em>advanced materials</em> and <em>sustainability</em>.
+          </p>
+          <p class="about__body">
+            My background in Management Information Systems allows me to bridge technology and engineering, creating innovative solutions at the intersection of disciplines. Currently pursuing a Master's in Advanced Aerospace Materials at ITU while working as an Assistant Brand Manager at Mondelez International.
+          </p>
+          <p class="about__body">
+            Always curious, always driven — I strive to bridge creativity and precision in every project I undertake.
+          </p>
+          <div class="about__actions">
+            <a href="img/file/cv(2).pdf" target="_blank" class="btn btn--primary magnetic">
+              <span>Download CV</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13h10M8 2v8M4 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="mailto:irem.yalin.work@gmail.com" class="btn btn--ghost magnetic">
+              <span>Say Hello</span>
+            </a>
+          </div>
+          <div class="about__info">
+            <div class="about__info-item">
+              <span class="about__info-label">Location</span>
+              <span class="about__info-value">Türkiye</span>
+            </div>
+            <div class="about__info-item">
+              <span class="about__info-label">Email</span>
+              <span class="about__info-value"><a href="mailto:irem.yalin.work@gmail.com">irem.yalin.work@gmail.com</a></span>
+            </div>
+            <div class="about__info-item">
+              <span class="about__info-label">Status</span>
+              <span class="about__info-value about__info-value--active">
+                <span class="pulse-dot"></span> Available for opportunities
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="about__visual">
+          <div class="about__image-wrap tilt-card">
+            <img src="img/person/iremyalinson.png" alt="İrem Yalın" class="about__image" onerror="this.style.display='none'">
+            <div class="about__image-placeholder">
+              <span>İ.Y</span>
+            </div>
+            <div class="about__image-frame"></div>
+          </div>
+          <div class="about__stats">
+            <div class="stat-card">
+              <span class="stat-card__number counter" data-target="4">0</span>
+              <span class="stat-card__label">Degrees &amp; Programs</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number counter" data-target="5">0</span>
+              <span class="stat-card__label">Work Experiences</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__number counter" data-target="6">0</span>
+              <span class="stat-card__label">Projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EDUCATION ═══════════════ -->
+  <section id="education" class="section education">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">02 — Education</span>
+        <h2 class="section__title">Learning &amp; Growth</h2>
+        <p class="section__quote">"Do not go where the path may lead, go instead where there is no path and leave a trail."</p>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline__item" data-year="2025–2027">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <h3 class="timeline__school">Istanbul Technical University</h3>
+              <span class="timeline__degree">Master's Degree</span>
+            </div>
+            <p class="timeline__program">Advanced Aerospace Materials</p>
+            <ul class="timeline__details">
+              <li>Focus on advanced composites, alloys, and polymers in aerospace</li>
+              <li>Material selection, testing &amp; manufacturing for aerospace applications</li>
+              <li>Sustainability practices and novel aerospace technologies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-year="2018–2024">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <h3 class="timeline__school">Yildiz Technical University</h3>
+              <span class="timeline__degree">Bachelor's Degree</span>
+            </div>
+            <p class="timeline__program">Metallurgical and Materials Engineering</p>
+            <ul class="timeline__details">
+              <li>Structure, properties, and behavior of metals, ceramics, polymers, composites</li>
+              <li>Material characterization, testing, and failure analysis</li>
+              <li>Manufacturing processes and sustainable engineering practices</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-year="2021–Pres.">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <h3 class="timeline__school">Istanbul University</h3>
+              <span class="timeline__degree">Open Education</span>
+            </div>
+            <p class="timeline__program">Management Information Systems</p>
+            <ul class="timeline__details">
+              <li>Technology integration with business processes</li>
+              <li>Data management, system design &amp; software development</li>
+              <li>IT project management, business analytics &amp; digital transformation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-year="2023–Pres.">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <h3 class="timeline__school">Anadolu University</h3>
+              <span class="timeline__degree">Open Education</span>
+            </div>
+            <p class="timeline__program">International Trade and Logistics</p>
+            <ul class="timeline__details">
+              <li>Global trade dynamics, supply chain management &amp; logistics strategies</li>
+              <li>International marketing, trade compliance &amp; transportation management</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">03 — Experience</span>
+        <h2 class="section__title">Professional Milestones</h2>
+      </div>
+      <div class="exp__grid">
+
+        <div class="exp__card tilt-card">
+          <div class="exp__card-top">
+            <div>
+              <h3 class="exp__company">Mondelez International</h3>
+              <p class="exp__role">Assistant Brand Manager</p>
+              <span class="exp__period">May 2025 – Present</span>
+            </div>
+            <div class="exp__tag exp__tag--active">Current</div>
+          </div>
+          <ul class="exp__duties">
+            <li>Supported brand strategies and marketing plans for Oreo and 7Days</li>
+            <li>Coordinated product launches, packaging updates &amp; in-store visibility projects</li>
+            <li>Planned cross-category and seasonal campaigns across retail &amp; e-commerce</li>
+            <li>Monitored sales performance and consumer insights for data-driven decisions</li>
+            <li>Participated in digital content creation and influencer collaborations</li>
+          </ul>
+        </div>
+
+        <div class="exp__card tilt-card">
+          <div class="exp__card-top">
+            <div>
+              <h3 class="exp__company">Assan Alüminyum</h3>
+              <p class="exp__role">K-team Long-Term Sales & Customer Relations Intern</p>
+              <span class="exp__period">July 2023 – June 2024 · Tuzla Facility</span>
+            </div>
+          </div>
+          <ul class="exp__duties">
+            <li>Managed 32 key accounts achieving 36,000 tons/year in aluminum sheet sales</li>
+            <li>Used SAP CRM, QlikView &amp; Power BI for pricing, orders &amp; crisis reports</li>
+            <li>Implemented Six Sigma improvements to enhance sales performance</li>
+            <li>Coordinated supply chain &amp; demand forecasting for seamless fulfillment</li>
+          </ul>
+        </div>
+
+        <div class="exp__card tilt-card">
+          <div class="exp__card-top">
+            <div>
+              <h3 class="exp__company">Assan Alüminyum</h3>
+              <p class="exp__role">Metallurgical Production Methods Intern</p>
+              <span class="exp__period">July – August 2023 · Dilovası Facility</span>
+            </div>
+          </div>
+          <ul class="exp__duties">
+            <li>Observed 360,000 t/year aluminum sheet, foil &amp; coated sheet production</li>
+            <li>Monitored hot &amp; cold rolling, annealing, and coating operations</li>
+            <li>Evaluated ISO 9001 compliance and supported quality control &amp; defect analysis</li>
+            <li>Performed data analysis on process parameters vs. final product quality</li>
+          </ul>
+        </div>
+
+        <div class="exp__card tilt-card">
+          <div class="exp__card-top">
+            <div>
+              <h3 class="exp__company">RMS Defence and Aviation</h3>
+              <p class="exp__role">Metallurgical Shaping Methods Intern</p>
+              <span class="exp__period">August – October 2022</span>
+            </div>
+          </div>
+          <ul class="exp__duties">
+            <li>Analyzed forming methods: forging, extrusion, deep drawing &amp; heat treatment</li>
+            <li>Supported 50 CNC machines, 20 laser cutters &amp; 30 press machines</li>
+            <li>Created process visualizations in SolidWorks &amp; AutoCAD</li>
+            <li>Implemented Six Sigma tools to reduce waste and improve efficiency</li>
+          </ul>
+        </div>
+
+        <div class="exp__card tilt-card">
+          <div class="exp__card-top">
+            <div>
+              <h3 class="exp__company">Coremate</h3>
+              <p class="exp__role">Volunteer IT Intern</p>
+              <span class="exp__period">August – October 2021</span>
+            </div>
+          </div>
+          <ul class="exp__duties">
+            <li>Developed facial recognition system using Python, OpenCV &amp; Azure cloud</li>
+            <li>Designed database structures for real-time data processing</li>
+            <li>Algorithm optimization via image preprocessing &amp; feature extraction</li>
+            <li>Collaborated in Agile development with cybersecurity focus</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">04 — Skills</span>
+        <h2 class="section__title">Key Competencies</h2>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skills__group">
+          <h3 class="skills__group-title">Digital Tools</h3>
+          <div class="skills__tags">
+            <span class="skill-tag">AutoCAD</span>
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">MS Office</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">SAP</span>
+            <span class="skill-tag">CRM</span>
+            <span class="skill-tag">Asana</span>
+            <span class="skill-tag">Trello</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Notion</span>
+            <span class="skill-tag">QlikView</span>
+            <span class="skill-tag">Azure</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3 class="skills__group-title">Languages</h3>
+          <div class="skills__lang-grid">
+            <div class="lang-card">
+              <span class="lang-card__name">English</span>
+              <span class="lang-card__level">C2 Advanced</span>
+              <div class="lang-card__bar"><div class="lang-card__fill" style="--fill: 96%"></div></div>
+            </div>
+            <div class="lang-card">
+              <span class="lang-card__name">Turkish</span>
+              <span class="lang-card__level">Native</span>
+              <div class="lang-card__bar"><div class="lang-card__fill" style="--fill: 100%"></div></div>
+            </div>
+            <div class="lang-card">
+              <span class="lang-card__name">Spanish</span>
+              <span class="lang-card__level">A2 Beginner</span>
+              <div class="lang-card__bar"><div class="lang-card__fill" style="--fill: 22%"></div></div>
+            </div>
+            <div class="lang-card">
+              <span class="lang-card__name">Japanese</span>
+              <span class="lang-card__level">A2 Beginner</span>
+              <div class="lang-card__bar"><div class="lang-card__fill" style="--fill: 22%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__group skills__group--full">
+          <h3 class="skills__group-title">Ongoing Certification Programs</h3>
+          <div class="cert__grid">
+            <div class="cert-card tilt-card">
+              <div class="cert-card__icon">✦</div>
+              <h4 class="cert-card__title">TEI Aviation Engines School</h4>
+              <p class="cert-card__desc">Aircraft engine technologies, materials, thermodynamics, manufacturing, and quality control. Hands-on experience in gas turbines and propulsion systems.</p>
+              <div class="cert-card__img-wrap">
+                <img src="img/projects/sertifikateihmo.png" alt="TEI Certificate" onerror="this.closest('.cert-card__img-wrap').style.display='none'">
+              </div>
+            </div>
+            <div class="cert-card tilt-card">
+              <div class="cert-card__icon">✦</div>
+              <h4 class="cert-card__title">TEI Professional</h4>
+              <p class="cert-card__desc">10-week program covering gas turbines, materials development, mechanical design &amp; engine performance led by TEI aerospace engineers.</p>
+              <div class="cert-card__img-wrap">
+                <img src="img/projects/sertifikateitp.png" alt="TEI Pro Certificate" onerror="this.closest('.cert-card__img-wrap').style.display='none'">
+              </div>
+            </div>
+            <div class="cert-card tilt-card">
+              <div class="cert-card__icon">✦</div>
+              <h4 class="cert-card__title">Turkish Airlines Aviation &amp; Business Education</h4>
+              <p class="cert-card__desc">Aviation, innovation, and digital transformation with hands-on training and networking with industry professionals.</p>
+              <div class="cert-card__img-wrap">
+                <img src="img/projects/sertifikathy.png" alt="THY Certificate" onerror="this.closest('.cert-card__img-wrap').style.display='none'">
+              </div>
+            </div>
+            <div class="cert-card tilt-card">
+              <div class="cert-card__icon">✦</div>
+              <h4 class="cert-card__title">FaradAI Clean Technology Entrepreneurship</h4>
+              <p class="cert-card__desc">Entrepreneurship, clean technologies, and sustainability with insights from industry experts and interactive online sessions.</p>
+              <div class="cert-card__img-wrap">
+                <img src="img/projects/sertifikafaradai.png" alt="FaradAI Certificate" onerror="this.closest('.cert-card__img-wrap').style.display='none'">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">05 — Projects</span>
+        <h2 class="section__title">Project Portfolio</h2>
+      </div>
+      <div class="projects__grid">
+
+        <div class="project-card tilt-card">
+          <div class="project-card__number">01</div>
+          <h3 class="project-card__title">Dragon Fest Assan Alüminyum</h3>
+          <p class="project-card__desc">Participated in the Dragon Festival rowing competition as part of the Assan Alüminyum team, contributing to team coordination and performance.</p>
+          <a href="https://www.linkedin.com/posts/assan-aluminyum_dragonfestivali-gelece%C4%9Fibirlikte%C5%9Fekillendirelim-activity-7112689376500850689-mNF4/" target="_blank" class="project-card__link">
+            View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card tilt-card">
+          <div class="project-card__number">02</div>
+          <h3 class="project-card__title">BTM Incubation Center</h3>
+          <p class="project-card__desc">Gained insights into the entrepreneurship ecosystem: business model development, market analysis, customer segmentation, financial planning &amp; investor presentations.</p>
+        </div>
+
+        <div class="project-card tilt-card">
+          <div class="project-card__number">03</div>
+          <h3 class="project-card__title">Dilek Yıldızım</h3>
+          <p class="project-card__desc">Led the team as project leader to produce odorless compost from on-campus food waste, developing skills in team leadership, event organization &amp; community relations.</p>
+          <a href="https://ytuspark.com/dilek-yildizim/" target="_blank" class="project-card__link">
+            View Project <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="project-card tilt-card">
+          <div class="project-card__number">04</div>
+          <h3 class="project-card__title">Bir Ses Bir Umut Music Community</h3>
+          <p class="project-card__desc">Co-founded and led a project transforming street performance and concert revenues into charitable donations for families in need.</p>
+        </div>
+
+        <div class="project-card tilt-card">
+          <div class="project-card__number">05</div>
+          <h3 class="project-card__title">YTUROK — Robotics Club</h3>
+          <p class="project-card__desc">Designed and programmed a line-following robot using Arduino, developing sensor integration and motor control algorithms.</p>
+        </div>
+
+        <div class="project-card tilt-card">
+          <div class="project-card__number">06</div>
+          <h3 class="project-card__title">Campus Compost System</h3>
+          <p class="project-card__desc">Research student contributing to planning, implementation &amp; reporting of producing odorless compost from campus food waste for green area fertilization.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="section__header">
+          <span class="section__label">06 — Contact</span>
+          <h2 class="section__title section__title--large">Just say<br><em>hello.</em></h2>
+          <p class="contact__sub">If you would like to receive my CV, collaborate, or have any questions — feel free to reach out.</p>
+        </div>
+        <div class="contact__links">
+          <a href="mailto:irem.yalin.work@gmail.com" class="contact__item magnetic">
+            <span class="contact__item-label">Email</span>
+            <span class="contact__item-value">irem.yalin.work@gmail.com</span>
+            <svg class="contact__item-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H9M19 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/irem-yalin/" target="_blank" class="contact__item magnetic">
+            <span class="contact__item-label">LinkedIn</span>
+            <span class="contact__item-value">linkedin.com/in/irem-yalin</span>
+            <svg class="contact__item-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H9M19 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://maps.app.goo.gl/W3stWKedRzz5vSBT9" target="_blank" class="contact__item magnetic">
+            <span class="contact__item-label">Location</span>
+            <span class="contact__item-value">Türkiye</span>
+            <svg class="contact__item-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 19L19 5M19 5H9M19 5v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="contact__cta-wrap">
+          <a href="img/file/cv(2).pdf" target="_blank" class="btn btn--primary btn--large magnetic">
+            <span>Download CV</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.5 14.5h11M9 2.5v9M4.5 8l4.5 5 4.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__name">İrem Yalın</span>
+        <span class="footer__copy">© 2025 — All rights reserved</span>
+        <span class="footer__built">Materials Engineer · Brand Manager · Innovator</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
